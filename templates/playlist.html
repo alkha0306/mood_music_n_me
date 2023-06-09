@@ -1,0 +1,81 @@
+{% extends 'emotion_detection.html' %}
+
+{% block title %}
+    Playlist Page
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <style>
+        a.pl_button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    background: #478dad;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .3em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+a.pl_button:hover {
+    background: #11d07d;
+}
+a.pl_button:active {
+    position: relative;
+    top: 1px;
+}
+            
+
+ul { list-style-type: none; }
+
+    </style>
+
+
+<div class="'container">
+    <ul class="playlist">
+        <br>
+        <li class="item">
+            <a class="pl_button" href="https://open.spotify.com/playlist/5s7Sp5OZsw981I2OkQmyrz">angry</a>
+        </li>
+        <br>
+        <li class="item">
+            <a class="pl_button" href="https://open.spotify.com/playlist/37i9dQZF1DX7qK8ma5wgG1">sad</a>
+        </li>
+        <br>
+        <li class="item">
+            <a class="pl_button" href="https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC">happy</a>
+        </li>
+        <br>
+        <li class="item">
+            <a class="pl_button" href="https://open.spotify.com/playlist/37i9dQZF1E4p8lDdAdWt03">neutral</a>
+        </li>
+        <br>
+        <li class="item">
+            <a class="pl_button" href="https://open.spotify.com/playlist/7rzS9iLiqjy65AsZd9qinf">fearful</a>
+        </li>
+        <br>
+        <li class="item">
+            <a class="pl_button" href="https://open.spotify.com/playlist/3qgzMg4m5tvf16PzlPgGa9">disgusted</a>
+        </li>
+        <br>
+        <li class="item">
+            <a class="pl_button" href="https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0">surprised</a>
+        </li>
+        <br>
+    </ul>
+</div>
+
+
+</body>
+
+    
+{% endblock %}

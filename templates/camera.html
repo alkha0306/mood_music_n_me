@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Capture Page
+{% endblock %}
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+{% endwith %}
+
+{% block content %}
+
+
+
+  
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2" margin="auto">
+              <br>
+                <h4> Click your picture here </h4>
+                <br>
+                <img src="{{ url_for('video_feed')}}" height="50%" class="center">
+                <form method="post" action="{{ url_for('tasks') }}">
+                <br>
+
+                <input type="submit" value="Capture" name="click" class="cap"/>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <br> 
+                    <p class=flashes>
+                    {% for message in messages %}
+                    {{ message }}
+                    {% endfor %}
+                    </p>
+                {% endif %}
+                {% endwith %}
+                </form>
+                <br>
+                <a class="nav-link" href="{{url_for('emotion_detection')}}"> Move to emotion detection </a>
+
+                <style>
+                  .flashes{text-align: center;
+                          color: green;}
+
+                  .cap{display: block;
+                       margin-right: auto;
+                       margin-left: auto;
+                       }
+                  .center {
+                      display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                       }
+                  h4 {text-align: center;
+                      color: lightseagreen;}
+
+                  .cap{text-align: center;}
+
+                  a.nav-link{
+                    background-color:#343a40;
+                    color: rgb(255, 255, 255);
+                    text-align: center;
+                  }
+                  </style>
+
+            </div>
+        </div>
+    </div>
+    </body>
+    
+    
+{% endblock %}
