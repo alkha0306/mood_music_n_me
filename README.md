@@ -21,9 +21,6 @@ The app analyses the picture using the trained model and the screen displays the
 
 ![Screenshot-Output](frontend-img/frontend_4.png?raw=true "Title")
 
-We can now move to the page with links to playlists based on several emotion. Here the user can either choose to go to a playlist based on the detected emotion or choose amongst the other options available.
-Once an emotion is selected the user is redirected to a playlist based on that emotion.
-
-![Screenshot-Output](frontend-img/frontend_5.png?raw=true "Title")
+User is now redirected to a playlist based on their emotions.
 
 ![Screenshot-Output](frontend-img/frontend_6.png?raw=true "Title")
