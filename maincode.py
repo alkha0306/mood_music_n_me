@@ -126,12 +126,20 @@ def emotion_detection():
    file = 'shots\shot.jpg'
    resultof =  getEmotion(file)
    emo_val = resultof[0]
-   return render_template ('emotion_detection.html',value = str(emo_val))
+   emotion_dict = { "happy"     : "https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC",
+              "sad"       : "https://open.spotify.com/playlist/37i9dQZF1DX7qK8ma5wgG1",
+              "angry"     : "https://open.spotify.com/playlist/5s7Sp5OZsw981I2OkQmyrz",
+              "neutral"   : "https://open.spotify.com/playlist/37i9dQZF1E4p8lDdAdWt03",  
+              "fearful"   : "https://open.spotify.com/playlist/7rzS9iLiqjy65AsZd9qinf",
+              "disgusted" : "https://open.spotify.com/playlist/3qgzMg4m5tvf16PzlPgGa9",
+              "surprised" : "https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0"}
+   
+   return render_template ('emotion_detection.html',value = str(emo_val),linkval = emotion_dict[emo_val])
 
 
 
 @app.route('/playist',methods=['POST','GET'])
-def playlist():
+def playlist(): 
     return render_template('playlist.html')
 
 
