@@ -1,4 +1,5 @@
-# Facial Emotion based Playlist Recommender App
+# Mood, Music and Me 
+Custom playlists for users based on facial emotion recognition.
 The project contains a flask based app that detects the current emotional state of the user by using the image captured by the user and detecting the emotion based on the users facial expressions.
 We use a pre trained model for face detection and FER library for facial emotion recognition.
 The OpenCV library is used to help enable capturing and processing the users picture.
